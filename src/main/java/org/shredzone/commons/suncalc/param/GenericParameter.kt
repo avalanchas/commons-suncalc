@@ -11,13 +11,17 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  */
+package org.shredzone.commons.suncalc.param
 
 /**
- * Module definition for commons-suncalc.
- */
-module org.shredzone.commons.suncalc {
-    requires static com.github.spotbugs.annotations;
-
-    exports org.shredzone.commons.suncalc;
-    exports org.shredzone.commons.suncalc.param;
+ * Generic parameters and options.
+ *
+ * @param <T>
+ * Type of the final builder
+</T> */
+interface GenericParameter<T> {
+    /**
+     * Creates a copy of the current parameters. The copy can be changed independently.
+     */
+    fun copy(): T
 }

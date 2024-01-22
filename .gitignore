@@ -2,3 +2,6 @@
 .settings
 target
 /bin/
+.gradle/
+.idea/
+gradle/
