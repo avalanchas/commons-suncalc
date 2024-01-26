@@ -11,23 +11,24 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  */
-package org.shredzone.commons.suncalc.param
+package org.shredzone.commons.suncalc.param;
 
 /**
  * An interface for the method that eventually executes the calculation.
  *
  * @param <T>
- * Result type
-</T> */
-interface Builder<T> {
+ *            Result type
+ */
+public interface Builder<T> {
+
     /**
      * Executes the calculation and returns the desired result.
-     *
-     *
+     * <p>
      * The resulting object is immutable. You can change parameters, and then invoke
-     * [.execute] again, to get a new object with new results.
+     * {@link #execute()} again, to get a new object with new results.
      *
      * @return Result of the calculation.
      */
-    fun execute(): T
+    T execute();
+
 }
